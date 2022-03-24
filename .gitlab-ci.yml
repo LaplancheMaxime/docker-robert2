@@ -1,0 +1,29 @@
+stages:
+  - build
+  - quality_gate
+  - deploy 
+
+dockerfile:deploy:hub:develop:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  before_script:
+    - apk update && apk add bash curl
+  script:
+    - export DOCKER_BUILD="1"
+    - bash update.sh
+  only:
+    - develop
+
+dockerfile:deploy:hub:master:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - export DOCKER_BUILD="1"
+    - export DOCKER_PUSH="1"
+    - bash update.sh
+  only:
+    - master
