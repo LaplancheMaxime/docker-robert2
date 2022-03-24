@@ -21,6 +21,8 @@ dockerfile:deploy:hub:master:
   image: docker:latest
   services:
     - docker:dind
+  before_script:
+    - apk update && apk add bash curl
   script:
     - export DOCKER_BUILD="1"
     - export DOCKER_PUSH="1"
