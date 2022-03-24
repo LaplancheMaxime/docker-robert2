@@ -26,4 +26,4 @@ dockerfile:deploy:hub:master:
     - export DOCKER_PUSH="1"
     - bash update.sh
   only:
-    - master
+    - main
