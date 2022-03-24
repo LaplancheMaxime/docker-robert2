@@ -9,7 +9,7 @@ dockerfile:deploy:hub:develop:
   services:
     - docker:dind
   before_script:
-    - apk update && apk add bash
+    - apk update && apk add bash curl
   script:
     - export DOCKER_BUILD="1"
     - ls -la
