@@ -2,12 +2,12 @@
 
 set -e
 
-source "${BASE_DIR}/versions.sh"
+source "${BASE_DIR}versions.sh"
 tags=""
 
 
 DOCKER_REPO_NAME="maximelaplanche/robert2"
-BASE_DIR=.
+
 PHP_VERSION="8-apache-buster"
 
 function docker_tag_exists() {
