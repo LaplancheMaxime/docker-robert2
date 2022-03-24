@@ -46,7 +46,7 @@ for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
         echo "  - Image already exist in registry"
     else
       echo "  - Build image ${DOCKER_REPO_NAME}:${currentTag} in registry "
-      docker build --pull --compress --tag "${CI_DOCKER_HUB_URL_REGISTRY}:${currentTag}" "${dir}"
+      docker build -q --pull --compress --tag "${CI_DOCKER_HUB_URL_REGISTRY}:${currentTag}" "${dir}"
 
       if [ "${DOCKER_PUSH}" = "1" ]; then
         echo "  - Push image ${DOCKER_REPO_NAME}:${currentTag} in registry "
