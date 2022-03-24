@@ -11,7 +11,7 @@ dockerfile:deploy:hub:develop:
   script:
     - export DOCKER_BUILD="1"
     - ls -la
-    - ./update.sh
+    - bash ./update.sh
   only:
     - develop
 
