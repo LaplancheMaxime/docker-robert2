@@ -10,6 +10,7 @@ dockerfile:deploy:hub:develop:
     - docker:dind
   script:
     - export DOCKER_BUILD="1"
+    - ls -la
     - ./update.sh
   only:
     - develop
