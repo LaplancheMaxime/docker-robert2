@@ -1,0 +1,33 @@
+---
+version: '3.7'
+services:
+  app:
+    image: maximelaplanche/robert2:latest
+    networks:
+      - robert2_db_network
+      - robert2_network
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: MdPToRootU3rF0rD0li8aR
+      MYSQL_DATABASE: robert2_db
+      MYSQL_USER: robert2_usr
+      MYSQL_PASSWORD: mpsAL@3^a/3`v&Za
+    volumes:
+      - robert2_data:/var/lib/mysql
+    networks:
+      - robert2_db_network
+
+# Docker Networks
+networks:
+  robert2_db_network:
+  robert2_network:
+
+# Docker volumes
+volumes:
+  robert2_data:
