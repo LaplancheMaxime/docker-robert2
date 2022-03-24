@@ -2,6 +2,7 @@
 
 set -e
 
+BASE_DIR="./"
 source "${BASE_DIR}versions.sh"
 tags=""
 

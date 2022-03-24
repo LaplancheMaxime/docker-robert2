@@ -8,11 +8,12 @@ dockerfile:deploy:hub:develop:
   image: docker:latest
   services:
     - docker:dind
+  before_script:
+    - apt-get update && apt-get install bash
   script:
     - export DOCKER_BUILD="1"
-    - export BASE_DIR="./"
     - ls -la
-    - . update.sh
+    - bash update.sh
   only:
     - develop
 
