@@ -46,15 +46,15 @@ for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
         echo "  - Image already exist in registry"
     else
       echo "  - Build image ${DOCKER_REPO_NAME}:${currentTag}"
-      docker build -q --pull --compress --tag "${CI_DOCKER_HUB_URL_REGISTRY}:${currentTag}" "${dir}"
+      docker build -q --pull --compress --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}" "${dir}"
 
       if [ "${DOCKER_PUSH}" = "1" ]; then
         echo "  - Push image ${DOCKER_REPO_NAME}:${currentTag} in registry "
-        docker push "${CI_DOCKER_HUB_URL_REGISTRY}:${currentTag}"
+        docker push "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}"
         
         if [ "${robert2Version}" = "${DOLIBARR_LATEST_TAG}" ]; then
           echo "  - Push image ${DOCKER_REPO_NAME}:latest in registry "
-          docker push ${CI_DOCKER_HUB_URL_REGISTRY}:latest
+          docker push ${CI_DOCKER_HUB_REGISTRY_IMAGE}:latest
           tags="${tags} latest"
         fi
       fi
