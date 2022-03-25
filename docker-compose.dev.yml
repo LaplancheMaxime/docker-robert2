@@ -1,0 +1,31 @@
+---
+version: '3.7'
+services:
+  app:
+    image: robert2
+    build:
+      context: .
+      dockerfile: ./images/${ROBERT2_VERSION}-php8/Dockerfile
+    environment:
+      ROBERT2_VERSION: 0.17.1
+    labels:
+      traefik.enable: true
+      traefik.http.routers.robert2.tls: true
+      traefik.http.routers.robert2.rule: Host(`robert2.traefik.me`)
+      traefik.http.routers.robert2.tls.domains[0].main: robert2.traefik.me
+      traefik.http.services.robert2.loadbalancer.server.port: 80
+      traefik.docker.network: localhost_development_web
+    networks:
+      - localhost_development_web
+
+  adminer:
+    image: adminer
+    ports:
+      - 8088:8080
+    networks:
+      - robert2_db_network
+
+# Docker Networks
+networks:
+  localhost_development_web:
+    external: true
