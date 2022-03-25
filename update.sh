@@ -25,6 +25,7 @@ fi
 for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
 
   currentTag="${robert2Version}-php${PHP_VERSION}"
+  tags="${tags} ${robert2Version}"
   tags="${tags} ${currentTag}"
 
   dir="${BASE_DIR}/images/${currentTag}"
@@ -46,11 +47,12 @@ for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
         echo "  - Image already exist in registry"
     else
       echo "  - Build image ${DOCKER_REPO_NAME}:${currentTag}"
-      docker build -q --pull --compress --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}" "${dir}"
+      docker build -q --pull --compress --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}" --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}" "${dir}"
 
       if [ "${DOCKER_PUSH}" = "1" ]; then
         echo "  - Push image ${DOCKER_REPO_NAME}:${currentTag} in registry "
-        docker push "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}"
+        docker push -q "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}"
+        docker push "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}"
         
         if [ "${robert2Version}" = "${DOLIBARR_LATEST_TAG}" ]; then
           echo "  - Push image ${DOCKER_REPO_NAME}:latest in registry "
