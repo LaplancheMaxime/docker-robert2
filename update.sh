@@ -52,7 +52,9 @@ for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
       if [ "${DOCKER_PUSH}" = "1" ]; then
         echo "  - Push image ${DOCKER_REPO_NAME}:${currentTag} in registry "
         docker push -q "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}"
-        docker push -q"${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}"
+        
+        echo "  - Push image ${DOCKER_REPO_NAME}:${robert2Version} in registry "
+        docker push -q "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}"
         
         if [ "${robert2Version}" = "${ROBERT2_LATEST_TAG}" ]; then
           echo "  - Push image ${DOCKER_REPO_NAME}:latest in registry "
