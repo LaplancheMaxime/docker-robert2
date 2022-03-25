@@ -15,7 +15,7 @@ function docker_tag_exists() {
     curl --silent -f --head -lL https://hub.docker.com/v2/repositories/$1/tags/$2/ > /dev/null
 }
 
-echo "Update process for robert2 software"
+echo "- Update process for robert2 software"
 
 if [ "${DOCKER_PUSH}" = "1" ]; then
   echo "Docker push enabled"
@@ -44,11 +44,16 @@ for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
 
   if [ "${DOCKER_BUILD}" = "1" ]; then
     if docker_tag_exists ${DOCKER_REPO_NAME} ${currentTag}; then
-        echo "  - Image already exist in registry"
+        echo "  - Image ${DOCKER_REPO_NAME}:${currentTag} already exist in registry"
     else
-      echo "  - Build image ${DOCKER_REPO_NAME}:${currentTag}"
-      docker build -q --pull --compress --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}" --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}" "${dir}"
-
+      if [ "${robert2Version}" = "${ROBERT2_LATEST_TAG}" ]; then
+        echo "  - Build image ${DOCKER_REPO_NAME}:${currentTag}, ${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}, latest"
+        docker build -q --pull --compress --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}" --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}" --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:latest" "${dir}"
+      else
+        echo "  - Build image ${DOCKER_REPO_NAME}:${currentTag}"
+        docker build -q --pull --compress --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}" --tag "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${robert2Version}" "${dir}"
+      fi
+      
       if [ "${DOCKER_PUSH}" = "1" ]; then
         echo "  - Push image ${DOCKER_REPO_NAME}:${currentTag} in registry "
         docker push -q "${CI_DOCKER_HUB_REGISTRY_IMAGE}:${currentTag}"
