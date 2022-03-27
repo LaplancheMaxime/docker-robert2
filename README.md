@@ -6,8 +6,8 @@ Dockerfile and compose for Robert2 (https://robertmanager.org/)
 
 ## Supported tags
 
-* **0.16.2**  0.16.2-php8-apache-buster | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0161-2021-11-03) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.16.2)
-* **0.17.1**  0.16.2-php8-apache-buster | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
+* **`0.16.2`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.16.2-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0161-2021-11-03) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.16.2)
+* **`0.17.1`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.17.1-php8-apache-buster/Dockerfile) [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
 ## What is Robert2 / Loxya
 Web application to manage equipment rental or loan. Simple, efficient, scalable and open-source. 
 
