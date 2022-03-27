@@ -2,9 +2,7 @@
 
 Dockerfile and compose for Robert2 (https://robertmanager.org/)
 
-Github project : https://github.com/Robert-2/Robert2
-
-Releases informations: https://github.com/Robert-2/Robert2/releases
+ [Gitlab image repository](https://gitlab.com/mlaplanche/docker-robert2/) | [Official Github project](https://github.com/Robert-2/Robert2) | [Releases informations](https://github.com/Robert-2/Robert2/releases) |
 
 ## Supported tags
 
