@@ -66,4 +66,4 @@ networks:
 volumes:
   robert2_data:
 ```
-Then run all services `docker-compose up -d`. Now, go to http://0.0.0.0 to access to the new Dolibarr installation.
+Then run all services `docker-compose up -d`. Now, go to http://0.0.0.0 to access to the new Robert2/Loxya installation.
