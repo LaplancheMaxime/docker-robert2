@@ -60,7 +60,7 @@ services:
       MYSQL_ROOT_PASSWORD: MdPToRootU3rF0rR0b3rt2
       MYSQL_DATABASE: robert2_db
       MYSQL_USER: robert2_usr
-      MYSQL_PASSWORD: MdPToRootU3rF0rR0b3rt2U$3r
+      MYSQL_PASSWORD: MdPToRootU3rF0rR0b3rt2Us3r
     volumes:
       - robert2_data:/var/lib/mysql
     networks:
