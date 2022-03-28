@@ -1,15 +1,20 @@
 # Robert2 / Loxya on Docker
+<div style="text-align: center">
+
+![docker-robert2](https://gitlab.com/uploads/-/system/project/avatar/34781125/docker-robert2.png)
 
 [![Docker Image Size](https://badgen.net/docker/size/maximelaplanche/robert2?icon=docker&label=image%20size)](https://hub.docker.com/repository/docker/maximelaplanche/robert2)
-![Github stars](https://badgen.net/github/stars/LaplancheMaxime/docker-robert2?icon=github&label=stars)
+[![Github stars](https://badgen.net/github/stars/LaplancheMaxime/docker-robert2?icon=github&label=stars)](https://github.com/LaplancheMaxime/docker-robert2)
 [![GitHub Official last release](https://badgen.net/github/release/Robert-2/Robert2/stable?icon=github)](https://github.com/Robert-2/Robert2/releases)
 [![GitHub Official last release](https://badgen.net/github/release/LaplancheMaxime/docker-robert2?icon=github)](https://github.com/LaplancheMaxime/docker-robert2)
 
-Dockerfile and compose for Robert2 (https://robertmanager.org/)
+Dockerfile and compose for Robert2 / Loxya (https://robertmanager.org/)
 
 [![Docker hub](https://dockeri.co/image/maximelaplanche/robert2)](https://hub.docker.com/r/maximelaplanche/robert2)
 
  [Gitlab image repository](https://gitlab.com/mlaplanche/docker-robert2/) | [Official Github project](https://github.com/Robert-2/Robert2) | [Releases informations](https://github.com/Robert-2/Robert2/releases) |
+
+</div>
 
 ## Supported tags
 * **`0.17.1`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.17.1-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
@@ -71,3 +76,9 @@ volumes:
   robert2_data:
 ```
 Then run all services `docker-compose up -d`. Now, go to http://0.0.0.0 to access to the new Robert2/Loxya installation.
+
+<style type="text/css">
+    img[alt="docker-robert2"] {
+        width: 100px;
+    }
+</style>
