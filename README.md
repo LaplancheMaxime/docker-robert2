@@ -1,7 +1,7 @@
 # Robert2 / Loxya on Docker
-<div style="text-align: center">
+<div align="center">
 
-![docker-robert2](https://gitlab.com/uploads/-/system/project/avatar/34781125/docker-robert2.png)
+<img src="https://gitlab.com/uploads/-/system/project/avatar/34781125/docker-robert2.png" width="100" alt="docker-robert2">
 
 [![Docker Image Size](https://badgen.net/docker/size/maximelaplanche/robert2?icon=docker&label=image%20size)](https://hub.docker.com/repository/docker/maximelaplanche/robert2)
 [![Github stars](https://badgen.net/github/stars/LaplancheMaxime/docker-robert2?icon=github&label=stars)](https://github.com/LaplancheMaxime/docker-robert2)
@@ -76,9 +76,3 @@ volumes:
   robert2_data:
 ```
 Then run all services `docker-compose up -d`. Now, go to http://0.0.0.0 to access to the new Robert2/Loxya installation.
-
-<style type="text/css">
-    img[alt="docker-robert2"] {
-        width: 100px;
-    }
-</style>
