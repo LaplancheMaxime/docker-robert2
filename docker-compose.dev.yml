@@ -5,7 +5,7 @@ services:
     image: robert2
     build:
       context: .
-      dockerfile: ./images/${ROBERT2_VERSION}-php8/Dockerfile
+      dockerfile: ./images/${ROBERT2_VERSION}-php8-apache-buster/Dockerfile
     environment:
       ROBERT2_VERSION: 0.17.1
     labels:
