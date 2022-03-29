@@ -28,7 +28,7 @@ for robert2Version in "${ROBERT2_VERSIONS[@]}"; do
   tags="${tags} ${robert2Version}"
   tags="${tags} ${currentTag}"
 
-  dir="${BASE_DIR}/images/${currentTag}"
+  dir="${BASE_DIR}images/${currentTag}"
 
   if [ "${GENERATE_IMAGES}" = "1" ]; then
     echo "- Generate Dockerfile for Dolibarr ${robert2Version}"
