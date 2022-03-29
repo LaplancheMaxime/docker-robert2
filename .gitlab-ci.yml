@@ -1,7 +1,6 @@
+---
 stages:
   - build
-  - quality_gate
-  - deploy 
 
 dockerfile:deploy:hub:develop:
   stage: build

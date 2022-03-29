@@ -1,4 +1,5 @@
 # Robert2 / Loxya on Docker
+
 <div align="center">
 
 <img src="https://gitlab.com/uploads/-/system/project/avatar/34781125/docker-robert2.png" width="100" alt="docker-robert2">
@@ -8,7 +9,7 @@
 [![GitHub Official last release](https://badgen.net/github/release/Robert-2/Robert2/stable?icon=github)](https://github.com/Robert-2/Robert2/releases)
 [![GitHub Official last release](https://badgen.net/github/release/LaplancheMaxime/docker-robert2?icon=github)](https://github.com/LaplancheMaxime/docker-robert2)
 
-Dockerfile and compose for Robert2 / Loxya (https://robertmanager.org/)
+Dockerfile and compose for Robert2 / Loxya (<https://robertmanager.org/>)
 
 [![Docker hub](https://dockeri.co/image/maximelaplanche/robert2)](https://hub.docker.com/r/maximelaplanche/robert2)
 
@@ -17,23 +18,31 @@ Dockerfile and compose for Robert2 / Loxya (https://robertmanager.org/)
 </div>
 
 ## Supported tags
-* **`0.18.0`**  `0.18.0-php8-apache-buster` | [Dockerfile](/images/0.18.0-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0180-2022-03-28) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.18.0)
+
+* **`latest`**  **`0.18.1`**  `0.18.1-php8-apache-buster` | [Dockerfile](/images/0.18.1-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0181-2022-03-29) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.18.1)
+
 * **`0.17.1`**  `0.17.1-php8-apache-buster` | [Dockerfile](/images/0.17.1-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
+
 * **`0.16.2`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.16.2-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0161-2021-11-03) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.16.2)
+
 ## What is Robert2 / Loxya
+
 Web application to manage equipment rental or loan. Simple, efficient, scalable and open-source. 
 
 ### Who is it for?
+
 If you are an association, a school or university, a company or even an auto-entrepreneur, and you have equipment to rent or to lend, this software is for you!
 
 It will help you manage your equipment, your services, your clients and beneficiaries, as well as your staff. 
 
-### More information 
+### More information
+
 * [Robert2 repository](https://github.com/Robert-2/Robert2)
 * [Robert2 official website](https://robertmanager.org/)
 * [Robert2 official documentation](https://robertmanager.org/wiki)
 
 ## How to run this image ?
+
 This image is based on the [official PHP repository](https://registry.hub.docker.com/_/php/).
 
 **Important**: This image don't contains database.
@@ -41,6 +50,7 @@ This image is based on the [official PHP repository](https://registry.hub.docker
 Let's use [Docker Compose](https://docs.docker.com/compose/) to integrate it with  [MySQL](https://hub.docker.com/_/mysql/).
 
 Create `docker-compose.yml` file as following:
+
 ```yaml
 ---
 version: '3.7'
@@ -76,4 +86,5 @@ networks:
 volumes:
   robert2_data:
 ```
-Then run all services `docker-compose up -d`. Now, go to http://0.0.0.0 to access to the new Robert2/Loxya installation.
+
+Then run all services `docker-compose up -d`. Now, go to <http://0.0.0.0> to access to the new Robert2/Loxya installation.

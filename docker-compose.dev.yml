@@ -1,13 +1,17 @@
 ---
+# We assume to have a traefik network on our 
+# development machine to expose robert2.treafik.me in SSL
+# More information here: https://zestedesavoir.com/billets/3355/traefik-v2-https-ssl-en-localhost/
+# You can up this stack from the ./run-dev.sh file
 version: '3.7'
 services:
   app:
     image: robert2
     build:
       context: .
-      dockerfile: ./images/${ROBERT2_VERSION}-php8/Dockerfile
+      dockerfile: ./images/${ROBERT2_VERSION}-php8-apache-buster/Dockerfile
     environment:
-      ROBERT2_VERSION: 0.17.1
+      ROBERT2_VERSION: 0.18.1
     labels:
       traefik.enable: true
       traefik.http.routers.robert2.tls: true
