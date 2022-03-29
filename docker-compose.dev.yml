@@ -11,7 +11,7 @@ services:
       context: .
       dockerfile: ./images/${ROBERT2_VERSION}-php8-apache-buster/Dockerfile
     environment:
-      ROBERT2_VERSION: 0.17.1
+      ROBERT2_VERSION: 0.18.1
     labels:
       traefik.enable: true
       traefik.http.routers.robert2.tls: true
