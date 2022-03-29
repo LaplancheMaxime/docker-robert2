@@ -17,7 +17,8 @@ Dockerfile and compose for Robert2 / Loxya (https://robertmanager.org/)
 </div>
 
 ## Supported tags
-* **`0.17.1`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.17.1-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
+* **`0.18.0`**  `0.18.0-php8-apache-buster` | [Dockerfile](/images/0.18.0-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0180-2022-03-28) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.18.0)
+* **`0.17.1`**  `0.17.1-php8-apache-buster` | [Dockerfile](/images/0.17.1-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
 * **`0.16.2`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.16.2-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0161-2021-11-03) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.16.2)
 ## What is Robert2 / Loxya
 Web application to manage equipment rental or loan. Simple, efficient, scalable and open-source. 
@@ -28,9 +29,9 @@ If you are an association, a school or university, a company or even an auto-ent
 It will help you manage your equipment, your services, your clients and beneficiaries, as well as your staff. 
 
 ### More information 
-[Robert2 repository](https://github.com/Robert-2/Robert2)
-
-[Robert2 official website](https://robertmanager.org/)
+* [Robert2 repository](https://github.com/Robert-2/Robert2)
+* [Robert2 official website](https://robertmanager.org/)
+* [Robert2 official documentation](https://robertmanager.org/wiki)
 
 ## How to run this image ?
 This image is based on the [official PHP repository](https://registry.hub.docker.com/_/php/).
