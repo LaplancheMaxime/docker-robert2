@@ -17,7 +17,7 @@ Dockerfile and compose for Robert2 / Loxya (https://robertmanager.org/)
 </div>
 
 ## Supported tags
-* **`0.18.0`**  `0.18.0-php8-apache-buster` | [Dockerfile](/images/0.18.0-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0180-2022-03-28) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.18.0)
+* **`latest`**  **`0.18.0`**  `0.18.0-php8-apache-buster` | [Dockerfile](/images/0.18.0-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0180-2022-03-28) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.18.0)
 * **`0.17.1`**  `0.17.1-php8-apache-buster` | [Dockerfile](/images/0.17.1-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0171-2022-01-06) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.17.1)
 * **`0.16.2`**  `0.16.2-php8-apache-buster` | [Dockerfile](/images/0.16.2-php8-apache-buster/Dockerfile) | [Official release note](https://github.com/Robert-2/Robert2/blob/master/CHANGELOG.md#0161-2021-11-03) | [Official github release](https://github.com/Robert-2/Robert2/releases/tag/0.16.2)
 ## What is Robert2 / Loxya
