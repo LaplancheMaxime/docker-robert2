@@ -1,4 +1,8 @@
 ---
+# We assume to have a traefik network on our 
+# development machine to expose robert2.treafik.me in SSL
+# More information here: https://zestedesavoir.com/billets/3355/traefik-v2-https-ssl-en-localhost/
+# You can up this stack from the ./run-dev.sh file
 version: '3.7'
 services:
   app:
