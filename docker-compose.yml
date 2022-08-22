@@ -2,8 +2,9 @@
 version: '3.7'
 services:
   app:
-    image: maximelaplanche/robert2:latest
+    image: maximelaplanche/robert2:0.19.2
     networks:
+      - robert2_network
       - robert2_db_network
       - robert2_network
     depends_on:
