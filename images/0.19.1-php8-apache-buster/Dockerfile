@@ -4,7 +4,7 @@ LABEL maintainer="Maxime LAPLANCHE <maxime.laplanche@outlook.com>"
 
 ENV ROBERT2_VERSION 0.19.1
 
-ENV PHP_INI_DATE_TIMEZONE 'UTC'
+ENV PHP_INI_DATE_TIMEZONE 'Europe/Paris'
 ENV PHP_INI_MEMORY_LIMIT 256M
 
 RUN apt-get update -y \
