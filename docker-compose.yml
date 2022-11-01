@@ -6,7 +6,6 @@ services:
     networks:
       - robert2_network
       - robert2_db_network
-      - robert2_network
     depends_on:
       - db
 
