@@ -32,6 +32,7 @@ RUN apt-get update -y \
     && a2enmod rewrite
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN printf '[PHP]\ndate.timezone = "Europe/Paris"\n' > /usr/local/etc/php/conf.d/tzone.ini
 
 RUN curl -fLSso Robert2-${ROBERT2_VERSION}.zip https://github.com/Robert-2/Robert2/releases/download/${ROBERT2_VERSION}/Robert2-${ROBERT2_VERSION}.zip &&\
     unzip Robert2-${ROBERT2_VERSION}.zip -d /tmp && \
