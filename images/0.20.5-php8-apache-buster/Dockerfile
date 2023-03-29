@@ -32,7 +32,7 @@ RUN apt-get update -y \
     && a2enmod rewrite
 
 RUN printf "\n" | pecl install apcu \
-    && docker-php-ext-enable apcu --ini-name 10-docker-php-ext-apcu.ini \
+    && docker-php-ext-enable apcu --ini-name 10-docker-php-ext-apcu.ini 
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN printf '[PHP]\ndate.timezone = "Europe/Paris"\n' > /usr/local/etc/php/conf.d/tzone.ini
