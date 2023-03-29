@@ -23,9 +23,10 @@ RUN apt-get update -y \
         default-mysql-client \
         postgresql-client \
         unzip \
+    && pecl install apcu \
     && apt-get autoremove -y \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) calendar intl mysqli pdo_mysql gd soap zip bcmath gettext \
+    && docker-php-ext-install -j$(nproc) calendar intl mysqli pdo_mysql gd soap zip apcu bcmath gettext \
     && docker-php-ext-configure pgsql -with-pgsql \
     && docker-php-ext-install pdo_pgsql pgsql \
     && mv ${PHP_INI_DIR}/php.ini-production ${PHP_INI_DIR}/php.ini \
