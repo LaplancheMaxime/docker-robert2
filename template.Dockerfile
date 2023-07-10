@@ -8,6 +8,8 @@ ENV PHP_INI_DATE_TIMEZONE 'Europe/Paris'
 ENV PHP_INI_MEMORY_LIMIT 256M
 ENV TZ=Europe/Paris 
 
+RUN mkdir -p /usr/src/php/ext/apcu && curl -fsSL        https://pecl.php.net/get/apcu | tar xvz -C "/usr/src/php/ext/apcu" --strip 1
+
 RUN apt-get update -y \
     && apt-get dist-upgrade -y \
     && apt-get install -y --no-install-recommends \
@@ -23,13 +25,14 @@ RUN apt-get update -y \
         default-mysql-client \
         postgresql-client \
         unzip \
-    && apt-get autoremove -y \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) calendar intl mysqli pdo_mysql gd soap zip apcu bcmath gettext \
-    && docker-php-ext-configure pgsql -with-pgsql \
-    && docker-php-ext-install pdo_pgsql pgsql \
-    && mv ${PHP_INI_DIR}/php.ini-production ${PHP_INI_DIR}/php.ini \
-    && a2enmod rewrite
+        && apt-get autoremove -y
+
+RUN docker-php-ext-configure gd --with-freetype --with-jpeg 
+RUN docker-php-ext-install -j$(nproc) calendar intl mysqli pdo_mysql gd soap zip apcu bcmath gettext 
+RUN docker-php-ext-configure pgsql -with-pgsql 
+RUN docker-php-ext-install pdo_pgsql pgsql 
+RUN mv ${PHP_INI_DIR}/php.ini-production ${PHP_INI_DIR}/php.ini 
+RUN a2enmod rewrite
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 RUN printf '[PHP]\ndate.timezone = "Europe/Paris"\n' > /usr/local/etc/php/conf.d/tzone.ini
