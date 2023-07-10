@@ -1,8 +1,8 @@
-FROM php:%PHP_BASE_IMAGE%
+FROM php:8-apache-buster
 
 LABEL maintainer="Maxime LAPLANCHE <maxime.laplanche@outlook.com>"
 
-ENV ROBERT2_VERSION %ROBERT2_VERSION%
+ENV ROBERT2_VERSION 0.20.6
 
 ENV PHP_INI_DATE_TIMEZONE 'Europe/Paris'
 ENV PHP_INI_MEMORY_LIMIT 256M
